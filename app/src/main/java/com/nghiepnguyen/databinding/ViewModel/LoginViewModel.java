@@ -8,11 +8,9 @@ import com.nghiepnguyen.databinding.model.User;
 
 public class LoginViewModel extends BaseObservable {
     private User mUser;
-    private String successMessage = "Login was successfull";
-    private String erroMessage = "Email or Password not valid";
 
     @Bindable
-    public String toastMessage = null;
+    private String toastMessage = null;
 
     public String getToastMessage() {
         return toastMessage;
@@ -36,7 +34,9 @@ public class LoginViewModel extends BaseObservable {
     }
 
     public void onLoginClicked() {
+        String erroMessage = "Email or Password not valid";
         if (mUser.isInputDataValid()) {
+            String successMessage = "Login was successfull";
             setToastMessage(successMessage);
         } else
             setToastMessage(erroMessage);

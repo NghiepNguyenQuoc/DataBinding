@@ -35,13 +35,14 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="8dp" />
+
             <Button
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="LOGIN"
-                bind:toastMessage="@{viewModel.toastMessage}"
                 android:onClick="@{()-> viewModel.onLoginClicked()}"
-                android:layout_height="wrap_content" />
+                android:text="LOGIN"
+                bind:toastMessage="@{viewModel.toastMessage}" />
         </LinearLayout>
     </ScrollView>
 </layout>
